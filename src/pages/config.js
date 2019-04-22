@@ -1,4 +1,3 @@
-import format from '@/const/filter'
 export default {
   searchForm: [
     {
@@ -108,24 +107,6 @@ export default {
   ],
   // dataPath: 'items',
   // totalPath: 'total_count',
-  columns: [
-    {type: 'selection'},
-    {prop: 'component_name', label: '组件名称'},
-    {prop: 'type', label: '分类'},
-    {prop: 'version', label: '版本'},
-    {prop: 'dev_lang', label: '开发语言'},
-    {
-      prop: 'last_update_time',
-      label: '最后更新时间',
-      minWidth: '90px',
-      formatter: row => format(row.last_update_time, 'YYYY-MM-DD')
-    },
-    {
-      prop: 'status',
-      label: '状态',
-      formatter: row => (row.status === 1 ? '上架' : '下架')
-    }
-  ],
   operationAttrs: {
     minWidth: '110px'
   },
